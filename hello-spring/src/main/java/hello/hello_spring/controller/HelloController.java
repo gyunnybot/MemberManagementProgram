@@ -11,7 +11,7 @@ public class HelloController {
     @GetMapping("hello")
     public String hello(Model model) {
         model.addAttribute("data", "hello!!");
-        return "hello";
+        return "hello"; //뷰 리졸버가 해당 hello.html 을 찾아 처리
     }
 
     @GetMapping("hello-mvc")
@@ -21,7 +21,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody
+    @ResponseBody //API, 뷰 리졸버 사용 X
     public String helloString(@RequestParam("name") String name) {
         return "hello " + name;
     }
@@ -31,7 +31,7 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;
+        return hello; //객체의 경우 JSON 형태로 반환한다
     }
 
     static class Hello {
