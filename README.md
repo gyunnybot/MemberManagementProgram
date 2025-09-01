@@ -1,4 +1,4 @@
-# MemberManagementProgram
+# MemberManagementProgram(Spring Boot)
 A simple Spring Boot + Thymeleaf project that demonstrates basic member registration and listing functionality.
 Users can register by entering their name, and the application manages the member list in memory (or database if extended).
 
