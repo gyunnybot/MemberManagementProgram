@@ -91,3 +91,12 @@ GET /members 요청이 발생합니다.
 조회한 회원 리스트를 model.addAttribute("members", members)로 뷰에 전달합니다.
 
 memberList.html 템플릿에서 th:each 문법으로 회원들을 화면에 출력합니다.
+
+
+## 업데이트
+2025-09-01-15:30 : JdbcMemberRepository를 새로 구현해 회원 정보가 H2 데이터베이스에 저장되도록 변경
+<img width="439" height="350" alt="image" src="https://github.com/user-attachments/assets/b07749cc-5773-4e49-b031-24d0a24111a2" />
+
+H2 다운로드 -> 설치 경로/bin -> h2.bat 입력
+
+JDBC URL 설정 : 초기 1회 jdbc:h2:~/test, 그 이후에는 jdbc:h2:tcp://localhost/~/test
