@@ -28,14 +28,14 @@ public class JpaMemberRepository implements MemberRepository {
     @Override
     public List<Member> findAll() {
         //JPA Query language.
-        return em.createQuery("select m from Member m", Member.class).getResultList(); //JPAQL
+        return em.createQuery("select m from Member m", Member.class).getResultList(); //JPQL
     }
 
     @Override
     public Optional<Member> findByName(String name) {
         List<Member> result = em.createQuery("select m from Member m where m.name = :name", Member.class)
                 .setParameter("name", name)
-                .getResultList(); //JPAQL
+                .getResultList(); //JPQL
 
         return result.stream().findAny();
     }

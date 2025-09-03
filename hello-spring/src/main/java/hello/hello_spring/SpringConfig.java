@@ -11,24 +11,33 @@ import javax.sql.DataSource;
 
 @Configuration
 public class SpringConfig {
-    private DataSource dataSource;
-    private EntityManager em;
+//    private DataSource dataSource;
+//    private EntityManager em;
 
-    public SpringConfig(DataSource dataSource, EntityManager em) {
-        this.dataSource = dataSource;
-        this.em = em;
+//    public SpringConfig(DataSource dataSource, EntityManager em) {
+//        this.dataSource = dataSource;
+//        this.em = em;
+//    }
+//~ JpaMemberRepository
+
+    private final MemberRepository memberRepository;
+
+    //SpringDataJpa가 자동으로 memberRepository Bean 등록까지 해결
+    public SpringConfig(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
     }
 
     @Bean
     public MemberService memberService() {
-        return new MemberService(memberRepository());
+        return new MemberService(memberRepository);
     }
 
-    @Bean
-    public MemberRepository memberRepository() {
-        //return new MemoryMemberRepository();
-        //return new JdbcMemberRepository(dataSource);
-        //return new JdbcTemplateMemberRepository(dataSource);
-        return new JpaMemberRepository(em);
-    }
+//    @Bean
+//    public MemberRepository memberRepository() {
+//        //return new MemoryMemberRepository();
+//        //return new JdbcMemberRepository(dataSource);
+//        //return new JdbcTemplateMemberRepository(dataSource);
+//        //return new JpaMemberRepository(em);
+//    }
+
 }
