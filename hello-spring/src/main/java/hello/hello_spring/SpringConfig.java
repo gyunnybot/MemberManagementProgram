@@ -1,5 +1,6 @@
 package hello.hello_spring;
 
+import hello.hello_spring.aop.TimeTraceAop;
 import hello.hello_spring.repository.*;
 import hello.hello_spring.service.MemberService;
 import jakarta.persistence.EntityManager;
@@ -22,7 +23,7 @@ public class SpringConfig {
 
     private final MemberRepository memberRepository;
 
-    //SpringDataJpa가 자동으로 memberRepository Bean 등록까지 해결
+    //SpringDataJpaMemberRepository 가 자동으로 memberRepository Bean 등록하고, 자동으로 리포지토리로 적용된다
     public SpringConfig(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
@@ -32,6 +33,13 @@ public class SpringConfig {
         return new MemberService(memberRepository);
     }
 
+//@Component 로 대체
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
+
+//SpringDataJpaMemberRepository 가 자동으로 memberRepository Bean 을 등록하고, 자동으로 리포지토리로 적용된다
 //    @Bean
 //    public MemberRepository memberRepository() {
 //        //return new MemoryMemberRepository();
@@ -39,5 +47,4 @@ public class SpringConfig {
 //        //return new JdbcTemplateMemberRepository(dataSource);
 //        //return new JpaMemberRepository(em);
 //    }
-
 }
