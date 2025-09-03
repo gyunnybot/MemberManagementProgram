@@ -102,7 +102,7 @@ H2 다운로드 -> 설치 경로/bin -> h2.bat 입력
 JDBC URL 설정 : 초기 1회 jdbc:h2:~/test, 그 이후에는 jdbc:h2:tcp://localhost/~/test
 <br><br>
 **2025-09-01-19:50** :
-JdbcTemplate을 활용한 JdbcTemplateMemberRepository 구현 후 리포지토리 대체. 기존 JDBC API에서의 반복 제거
+    JdbcTemplate을 활용한 JdbcTemplateMemberRepository 구현 후 리포지토리 대체. 기존 JDBC API에서의 반복 제거
 <br><br>
 **2025-09-03-11:29** :
 JpaMemberRepository 구현 후 리포지토리 대체. Hibernate를 통한 query 자동 생성
