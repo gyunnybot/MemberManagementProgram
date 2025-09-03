@@ -104,3 +104,5 @@ JDBC URL 설정 : 초기 1회 jdbc:h2:~/test, 그 이후에는 jdbc:h2:tcp://loc
 **2025-09-01-19:50** : JdbcTemplate을 활용한 JdbcTemplateMemberRepository 구현 후 리포지토리 대체. 기존 JDBC API에서의 반복 제거
 
 **2025-09-03-11:29** : JpaMemberRepository 구현 후 리포지토리 대체. Hibernate를 통한 query 자동 생성
+
+**2025-09-03-11:54** : SpringDataJpaMemberRepository 구현 후 리포지토리 대체
