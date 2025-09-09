@@ -17,14 +17,13 @@ Users can register by entering their name, and the application manages the membe
 
 사용자에게 이름을 입력할 수 있는 폼 화면이 표시됩니다.
 
-### 1. 회원 등록 데이터 입력
+#### 1. 회원 등록 데이터 입력
 
 사용자가 입력창에 이름을 적고 "등록" 버튼을 누릅니다.
 
 브라우저는 POST /members/new 요청을 보냅니다.
 
-
-### 2. 컨트롤러에서 데이터 받기
+#### 2. 컨트롤러에서 데이터 받기
 
 컨트롤러의 create(MemberForm form) 메서드가 호출됩니다.
 
@@ -32,13 +31,13 @@ HTML name="name" → MemberForm 객체의 name 필드로 값이 자동 매핑됩
 
 새로운 Member 객체가 만들어지고, 그 안에 이름이 저장됩니다.
 
-### 3. 서비스 계층에서 회원 저장
+#### 3. 서비스 계층에서 회원 저장
 
 컨트롤러는 memberService.join(member) 를 호출합니다.
 
 MemberService 는 비즈니스 로직(중복 회원 체크 등)을 처리한 뒤, MemberRepository 를 이용해 실제 저장소(메모리 또는 DB)에 회원을 저장합니다.
 
-### 4. 홈으로 리다이렉트
+#### 4. 홈으로 리다이렉트
 
 회원 가입이 끝나면 return "redirect:/"; 로 홈 화면으로 돌아갑니다.
 
@@ -53,9 +52,7 @@ GET /members 요청이 발생합니다.
 
 memberList.html 템플릿에서 th:each 문법으로 회원들을 화면에 출력합니다.
 
----
-
-## 리포지토리 업데이트
+## Repository Update
 
 1. Memory
 
@@ -65,4 +62,4 @@ memberList.html 템플릿에서 th:each 문법으로 회원들을 화면에 출�
 
 4. JPA
 
-5. 스프링 데이터 JPA (+AOP)
+5. 스프링 데이터 JPA (+AOP 추가)
