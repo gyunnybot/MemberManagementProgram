@@ -1,15 +1,15 @@
-## Member Management System
+# Member Management System
 
 A simple Spring Boot + Thymeleaf project that demonstrates basic member registration and listing functionality.
 Users can register by entering their name, and the application manages the member list in memory or database.
 
-### 홈 화면 진입
+## 홈 화면 진입
 
 사용자가 웹 브라우저에서 http://localhost:8080/ 에 접속합니다.
 
 홈 화면에는 "회원 등록" 또는 "회원 목록" 으로 이동할 수 있는 메뉴가 있습니다.
 
-### 회원 등록 화면 이동
+## 회원 등록 (등록)
 
 사용자가 "회원 등록" 메뉴를 클릭하면 GET /members/new 요청이 발생합니다.
 
@@ -42,7 +42,7 @@ MemberService 는 비즈니스 로직(중복 회원 체크 등)을 처리한 뒤
 
 회원 가입이 끝나면 return "redirect:/"; 로 홈 화면으로 돌아갑니다.
 
-### 회원 목록 조회 (관리)
+## 회원 목록 조회 (관리)
 
 사용자가 "회원 목록" 메뉴를 클릭하면
 GET /members 요청이 발생합니다.
@@ -55,7 +55,7 @@ memberList.html 템플릿에서 th:each 문법으로 회원들을 화면에 출�
 
 ---
 
-### 리포지토리 업데이트
+## 리포지토리 업데이트
 
 Memory
 
