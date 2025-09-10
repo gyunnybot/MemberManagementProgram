@@ -9,5 +9,5 @@ public class MembermanagementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MembermanagementApplication.class, args);
 	}
-	//db 실행 위치 -> C:\Program Files (x86)\H2\bin
+	// db 실행 : C:\Program Files (x86)\H2\bin -> h2.bat
 }
