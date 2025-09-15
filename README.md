@@ -43,8 +43,7 @@ MemberService 는 비즈니스 로직(중복 회원 체크 등)을 처리한 뒤
 
 ## 회원 목록 조회 (관리)
 
-사용자가 "회원 목록" 메뉴를 클릭하면
-GET /members 요청이 발생합니다.
+사용자가 "회원 목록" 메뉴를 클릭하면 GET /members 요청이 발생합니다.
 
 컨트롤러의 List(Model model) 메서드가 실행되어, memberService.findMembers() 로 전체 회원을 조회합니다.
 
