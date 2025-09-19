@@ -51,14 +51,10 @@ MemberService 는 비즈니스 로직(중복 회원 체크 등)을 처리한 뒤
 
 memberList.html 템플릿에서 th:each 문법으로 회원들을 화면에 출력합니다.
 
-## Repository Update
+## 데이터 저장 방식 변경
 
-1. Memory
-
-2. 순수 Jdbc
-
-3. Jdbc Template
-
-4. JPA
-
-5. 스프링 데이터 JPA (+AOP 추가)
+- Memory
+- 순수 Jdbc
+- Jdbc Template
+- JPA
+- 스프링 데이터 JPA (+AOP 추가)
